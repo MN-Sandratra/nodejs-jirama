@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        const selectedCounter = Counter.findById(req.params.id);
+        const selectedCounter = await Counter.findById(req.params.id);
         res.json(selectedCounter);
     } catch (err) {
         res.json({ message: err });
@@ -57,7 +57,7 @@ router.put('/:id', async (req, res) => {
 // delete counter 
 router.delete('/:id',async(req,res)=>{
     try {
-        const deleteCounter=Counter.findByIdAndDelete(req.params.id);
+        const deleteCounter=await Counter.findByIdAndDelete(req.params.id);
         res.json(deleteCounter);
     } catch (err) {
         res.json({ message: err })
