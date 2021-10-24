@@ -7,6 +7,10 @@ const counterSchema = new Schema(
             type: Schema.Types.ObjectId,
             refs: 'User',
             required: true
-        }
+        },
+        adresse:String,
     }
 )
+
+const Counters=model('Counters',counterSchema);
+module.exports=Counters;
