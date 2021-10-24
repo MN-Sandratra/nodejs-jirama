@@ -2,6 +2,7 @@ import express from "express";
 const router = express.Router();
 const User = require('../models/users');
 
+// show users 
 router.get('/', async (req, res) => {
     try {
         const users = await User.find();
@@ -19,7 +20,7 @@ router.get('/:id',async(req,res)=>{
         res.json({ message: err});
     }
 })
-
+// create user 
 router.post('/', async (req, res) => {
     const user = new User({
         nom: req.body.nom,
@@ -27,6 +28,7 @@ router.post('/', async (req, res) => {
         telephone: req.body.telephone,
         adresse: req.body.adresse,
         commune: req.body.commune,
+        cin:req.body.cin,
         agence: req.body.agence,
         sexe: req.body.sexe,
         username: req.body.username,
@@ -51,6 +53,7 @@ router.put('/:id', async (req, res) => {
                     telephone: req.body.telephone,
                     adresse: req.body.adresse,
                     commune: req.body.commune,
+                    cin:req.body.cin,
                     agence: req.body.agence,
                     sexe: req.body.sexe,
                     username: req.body.username,

@@ -7,6 +7,7 @@ const userSchema=new Schema(
         telephone:String,
         adresse:String,
         commune:String,
+        cin:String,
         agence:String,
         sexe:Boolean,
         username:{
