@@ -26,11 +26,13 @@ router.post('/', async (req, res) => {
         nom: req.body.nom,
         prenom: req.body.prenom,
         telephone: req.body.telephone,
+        email:req.body.email,
         adresse: req.body.adresse,
         commune: req.body.commune,
         cin:req.body.cin,
         agence: req.body.agence,
         sexe: req.body.sexe,
+        status:req.body.status,
         username: req.body.username,
         password: req.body.password
     })
@@ -51,11 +53,13 @@ router.put('/:id', async (req, res) => {
                     nom: req.body.nom,
                     prenom: req.body.prenom,
                     telephone: req.body.telephone,
+                    email:req.body.email,
                     adresse: req.body.adresse,
                     commune: req.body.commune,
                     cin:req.body.cin,
                     agence: req.body.agence,
                     sexe: req.body.sexe,
+                    status:req.body.status,
                     username: req.body.username,
                     password: req.body.password
                 }

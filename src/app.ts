@@ -9,6 +9,8 @@ const port=3030;
 //route
 const userRoute=require('./routes/users');
 const counterRoute=require('./routes/counter');
+const reportRoute = require('./routes/report');
+const factureRoute=require('./routes/facture');
 
 global.__basedir = __dirname;
 
@@ -25,6 +27,8 @@ app.use(express.urlencoded({ extended: true }))
 //middleware route
 app.use('/api/users',userRoute);
 app.use('/api/counters',counterRoute);
+app.use('/api/reports',reportRoute);
+app.use('/api/factures',factureRoute);
 
 app.get('/',(req,res)=>{
     res.send('Hello world')

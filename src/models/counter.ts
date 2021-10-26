@@ -5,7 +5,7 @@ const counterSchema = new Schema(
         type: String,
         user: {
             type: Schema.Types.ObjectId,
-            refs: 'User',
+            refs: 'Users',
             required: true
         },
         adresse:String,
