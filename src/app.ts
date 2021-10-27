@@ -11,6 +11,7 @@ const userRoute=require('./routes/users');
 const counterRoute=require('./routes/counter');
 const reportRoute = require('./routes/report');
 const factureRoute=require('./routes/facture');
+const postRoute=require('./routes/post');
 
 global.__basedir = __dirname;
 
@@ -29,6 +30,7 @@ app.use('/api/users',userRoute);
 app.use('/api/counters',counterRoute);
 app.use('/api/reports',reportRoute);
 app.use('/api/factures',factureRoute);
+app.use('/api/posts',postRoute);
 
 app.get('/',(req,res)=>{
     res.send('Hello world')
