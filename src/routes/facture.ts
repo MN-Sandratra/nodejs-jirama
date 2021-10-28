@@ -27,6 +27,7 @@ router.post('/', async (req, res) => {
         newReport: req.body.newReport,
         date: req.body.date,
         status: req.body.status,
+        compteur:req.body.compteur
     })
     try {
         const savedFacture = await facture.save();
@@ -46,6 +47,7 @@ router.put('/:id', async (req, res) => {
                     newReport: req.body.newReport,
                     date: req.body.date,
                     status: req.body.status,
+                    compteur:req.body.compteur
                 }
             }
         );

@@ -11,7 +11,11 @@ const factureSchema = new Schema({
             refs: 'Reports',
         },
     date:Date,
-    status:String
+    status:String,
+    compteur:{
+        type: Schema.Types.ObjectId,
+        refs: 'Counters',
+    },   
 });
 
 const Factures=model('Factures',factureSchema);
